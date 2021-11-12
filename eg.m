@@ -23,6 +23,10 @@ ph=locs(spb(end));
 pl=locs(spb(end-1));
 pot=(ph+pl)/2.0;
 Z=imbinarize(G,pot/255.0);
+szg=size(G);
+zpm=zeros(szg(1),szg(2));
+zpm(G>=pot)=1;
+%zpm(G<pot)=0;
 
 figure
 
